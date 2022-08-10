@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.print("Gidilen Yol Km cinsinden:");
+        Scanner scan = new Scanner(System.in);
+        double a = scan.nextDouble();
+        TaxiMeter(a);
+
+    }
+    public static void TaxiMeter(double Km){
+        double TotalPoint = 10 + Km*(2.20);
+        if(TotalPoint > 20){
+            System.out.print("Taksi ucreti = "+ TotalPoint+ "TL");
+        }
+        if(TotalPoint < 20 && TotalPoint > 0){
+            System.out.print("Aç Kapa ucreti =" + 20+ "TL");
+
+        }
+
+    }
+}
